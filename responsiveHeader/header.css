@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: #5b639c;
+  padding: 15px 100px;
+}
+
+header .logo {
+  position: relative;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header .navigation{
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+header .navigation li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+header .navigation li a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+header .navigation li a:hover{
+  color: #ffeb3b;
+}
+
+header .search {
+  position: relative;
+  width: 300px;
+  height: 40px;
+}
+
+header .search input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: transparent;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 0 40px 0 10px;
+}
+
+header .search input::placeholder{
+  color: #fff;
+}
+
+header .search .fa-search{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  right: 0;
+  padding-right: 10px;
+}
+
+.banner {
+  background: #434978;
+  padding: 200px 100px 100px;
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner .content {
+  max-width: 700px;
+}
+
+.banner .content h2{
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.banner .content p {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.banner .content a{
+  display: inline-block;
+  background: #fff;
+  color: #434978;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.banner .image {
+  filter: invert(1);
+  max-width: 400px;
+  margin-left: 50px;
+}
+
+.offerings{
+  background-color:#5b639c;
+  height: 100vh;
+}
+
+@media (max-width: 991px) {
+  header{
+    padding: 5px 15px;
+    flex-direction: column;
+  }
+
+  .banner {
+    position: relative;
+    margin-top: 100px;
+    padding: 15px 20px 50px;
+    flex-direction: column-reverse;
+    max-height: 100vh;
+  }
+  .banner:disabled{
+    justify-content: space-between;
+  }
+  .banner .image{
+    margin-left: 0px;
+    max-width: 80%;
+  }
+  .banner h2{
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  header .search{
+    width: 100%;
+  }
+  .banner .image{
+    margin-top: 30px;
+  }
+}
